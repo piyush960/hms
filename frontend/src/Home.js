@@ -13,11 +13,12 @@ import './App.css';
 const theme = {
   global: {
     colors: {
-      brand: '#000000',
-      focus: '#000000'
+      brand: '#00FFFF',
+      focus: "#00FFFF",
+      active: "#00FFFF",
     },
     font: {
-      family: 'Lato',
+      family: 'Arial',
     },
   },
 };
@@ -26,10 +27,10 @@ const SidebarButton = ({ label, ...rest }) => (
   <Button plain {...rest}>
     {({ hover }) => (
       <Box
-        background={hover ? "#DADADA" : undefined}
-        pad={{ horizontal: "large", vertical: "medium" }}
+        background={hover ? "#008b8b" : undefined}
+        pad={{ horizontal: "medium", vertical: "medium" }}
       >
-        <Text size="large">{label}</Text>
+        <Text size="large" color={'#000000'}>{label}</Text>
       </Box>
     )}
   </Button>
@@ -97,7 +98,7 @@ export class Home extends Component {
         flex={false}
         style={{borderBottom:"1px solid grey"}}
       >
-        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+        <a style={{ color: '#000000', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>Hospital Management System</Heading></a>
       </Box>
     );
 

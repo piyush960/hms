@@ -1,8 +1,8 @@
 INSERT INTO Patient(email,password,name,address,gender)
 VALUES
-('ramesh@gmail.com','hrishikesh13','Ramesh','Tamil Nadu', 'male'),
-('suresh@gmail.com','hrishikesh13','Suresh','Karnataka', 'male'),
-('rakesh@gmail.com','hrishikesh13','Rakesh','Gujarat', 'male')
+('piyush@gmail.com','hrishikesh13','Piyush','Mumbai', 'male'),
+('harsh@gmail.com','hrishikesh13','Harsh','Pune', 'male'),
+('yash@gmail.com','hrishikesh13','Yash','Katraj', 'male')
 ;
 
 INSERT INTO MedicalHistory(id,date,conditions,surgeries,medication)
@@ -14,8 +14,8 @@ VALUES
 
 INSERT INTO Doctor(email, gender, password, name)
 VALUES
-('hathalye7@gmail.com', 'male', 'hrishikesh13', 'Hrishikesh Athalye'),
-('hathalye8@gmail.com', 'male', 'hrishikesh13', 'Hrishikesh Athalye')
+('drpiyush@gmail.com', 'male', 'drpiyush', 'Piyush Dahake'),
+('drharsh@gmail.com', 'male', 'drharsh', 'Harsh Butle')
 ;
 
 INSERT INTO Appointment(id,date,starttime,endtime,status)
@@ -27,9 +27,9 @@ VALUES
 
 INSERT INTO PatientsAttendAppointments(patient,appt,concerns,symptoms)
 VALUES
-('ramesh@gmail.com',1, 'none', 'itchy throat'),
-('suresh@gmail.com',2, 'infection', 'fever'),
-('rakesh@gmail.com',3, 'nausea', 'fever')
+('piyush@gmail.com',1, 'none', 'itchy throat'),
+('harsh@gmail.com',2, 'infection', 'fever'),
+('yash@gmail.com',3, 'nausea', 'fever')
 ;
 
 INSERT INTO Schedule(id,starttime,endtime,breaktime,day)
@@ -44,27 +44,27 @@ VALUES
 
 INSERT INTO PatientsFillHistory(patient,history)
 VALUES
-('ramesh@gmail.com', 1),
-('suresh@gmail.com', 2),
-('rakesh@gmail.com', 3)
+('piyush@gmail.com', 1),
+('harsh@gmail.com', 2),
+('yash@gmail.com', 3)
 ;
 
 INSERT INTO Diagnose(appt,doctor,diagnosis,prescription)
 VALUES
-(1,'hathalye7@gmail.com', 'Bloating', 'Ibuprofen as needed'),
-(2,'hathalye8@gmail.com', 'Muscle soreness', 'Stretch morning/night'),
-(3,'hathalye8@gmail.com', 'Vitamin Deficiency', 'Good Diet')
+(1,'drpiyush@gmail.com', 'Bloating', 'Ibuprofen as needed'),
+(2,'drharsh@gmail.com', 'Muscle soreness', 'Stretch morning/night'),
+(3,'drharsh@gmail.com', 'Vitamin Deficiency', 'Good Diet')
 ;
 
 INSERT INTO DocsHaveSchedules(sched,doctor)
 VALUES
-(001,'hathalye7@gmail.com'),
-(002,'hathalye8@gmail.com')
+(001,'drpiyush@gmail.com'),
+(002,'drharsh@gmail.com')
 ;
 
 INSERT INTO DoctorViewsHistory(history,doctor)
 VALUES
-(1,'hathalye7@gmail.com'),
-(2,'hathalye8@gmail.com'),
-(3,'hathalye8@gmail.com')
+(1,'drpiyush@gmail.com'),
+(2,'drharsh@gmail.com'),
+(3,'drharsh@gmail.com')
 ;

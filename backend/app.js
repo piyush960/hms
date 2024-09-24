@@ -5,14 +5,15 @@ var path = require('path');
 // var logger = require('morgan');
 var mysql = require('mysql');
 var cors = require('cors');
-var port = 3001
+var PORT = 3001
 
 //Connection Info
 var con = mysql.createConnection({
-  host: 'localhost',
-  user: 'hathalye7',
-  password: 'hrishikesh',
-  database: 'HMS',
+  host: '127.0.0.1',
+  port: 3306,
+  user: 'root',
+  password: 'piyush123',
+  database: 'hms',
   multipleStatements: true
 });
 
@@ -663,8 +664,8 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port} `);
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT} `);
 });
 
 module.exports = app;

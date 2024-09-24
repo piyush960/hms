@@ -13,15 +13,16 @@ import {
 import './App.css';
 
 const theme = {
-    global: {
-        colors: {
-            brand: '#000000',
-            focus: '#000000'
-        },
-        font: {
-            family: 'Lato',
-        },
+  global: {
+    colors: {
+      brand: '#00FFFF',
+      focus: "#00FFFF",
+      active: "#00FFFF",
     },
+    font: {
+      family: 'Arial',
+    },
+  },
 };
 
 var id;
@@ -50,7 +51,7 @@ export class ShowDiagnoses extends Component {
                 align='center'
                 flex={false}
             >
-                <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+                <a style={{ color: '#000000', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>Hospital Management System</Heading></a>
             </Box>
         );
         const Body = () => (

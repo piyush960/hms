@@ -20,12 +20,12 @@ import './App.css';
 const theme = {
   global: {
     colors: {
-      brand: '#000000',
-      focus: "#000000",
-      active: "#000000",
+      brand: '#00FFFF',
+      focus: "#00FFFF",
+      active: "#00FFFF",
     },
     font: {
-      family: 'Lato',
+      family: 'Arial',
     },
   },
 };
@@ -78,9 +78,10 @@ const DropContent = ({ date: initialDate, time: initialTime, onClose }) => {
         date={date || initialDate}
         onSelect={setDate}
         showAdjacentDays={false}
+        size='small'
         required
       />
-      <Box flex={false} pad="medium" gap="small">
+      <Box flex={false} pad="small" gap="small">
         <Keyboard
           required
           onEnter={event => {
@@ -137,7 +138,7 @@ const DropContent = ({ date: initialDate, time: initialTime, onClose }) => {
           />
         </Keyboard>
         <Box flex={false}>
-          <Button label="Done" onClick={close} color="#00739D" />
+          <Button label="Done"  onClick={close} color="#00FFFF" />
         </Box>
       </Box>
     </Box>
@@ -158,7 +159,7 @@ const DateTimeDropButton = () => {
 
   return (
     <Grommet theme={theme}>
-      <Box align="center" pad="large">
+      <Box align="center" pad="medium">
         <DropButton
           open={open}
           onClose={() => setOpen(false)}
@@ -268,7 +269,7 @@ export class SchedulingAppt extends Component {
     return (
       <Grommet theme={theme} full>
         <AppBar>
-        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+        <a style={{ color: '#000000', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>Hospital Management System</Heading></a>
         </AppBar>
         <Box align="center" pad="small" gap="small">
           <Form

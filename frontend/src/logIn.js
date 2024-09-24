@@ -15,12 +15,12 @@ import './App.css';
 const theme = {
   global: {
     colors: {
-      brand: '#000000',
-      focus: "#000000",
-      active: "#000000",
+      brand: '#00FFFF',
+      focus: "#00FFFF",
+      active: "#00FFFF",
     },
     font: {
-      family: 'Lato',
+      family: 'Arial',
     },
   },
 };
@@ -55,7 +55,7 @@ class LogIn extends Component {
     return (
       <Grommet theme={theme} full>
         <AppBar>
-        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+        <a style={{ color: '#000000', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>Hospital Management System</Heading></a>
         </AppBar>
 
         <Box
@@ -115,8 +115,8 @@ class LogIn extends Component {
               <FormField
                 component={CheckBox}
                 checked={isDoctor}
-                margin="large"
-                label="I'm a doctor"
+                margin="medium"
+                label="Login as Doctor"
                 name="isDoc"
                 onChange={(event) => {
                   this.setState({ isDoctor: event.target.checked })
